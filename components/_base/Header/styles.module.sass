@@ -1,0 +1,23 @@
+@import '/styles/vars.sass'
+
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 42px
+    padding-bottom: 42px
+
+.header_logo
+    width: 9vw
+
+.header_nav
+    display: flex
+    align-items: center
+    color: $color_text_secondary
+
+.header_navLink
+    &:not(:last-child)
+        margin-right: 40px
+
+.header_navLink.active
+    color: $color_primary

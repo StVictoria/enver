@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import Header from './_base/Header'
-import s from './styles.module.sass'
+import s from './Main.module.sass'
+import Footer from './_base/Footer'
 
 const Main: FC = () => {
   return (
@@ -17,7 +18,7 @@ const Main: FC = () => {
 
         <section>Contact Us</section>
       </main>
-      <footer>Footer</footer>
+      <Footer />
     </div>
   )
 }

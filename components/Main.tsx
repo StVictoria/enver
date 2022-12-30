@@ -2,13 +2,14 @@ import { FC } from 'react'
 import Header from './_base/Header'
 import s from './Main.module.sass'
 import Footer from './_base/Footer'
+import Banner from './Banner'
 
 const Main: FC = () => {
   return (
     <div className={s.mainWrapper}>
       <Header />
       <main className='container'>
-        <section>Banner</section>
+        <Banner />
 
         <section>WhyEnver</section>
 

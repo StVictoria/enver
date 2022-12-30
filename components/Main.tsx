@@ -4,6 +4,7 @@ import s from './Main.module.sass'
 import Footer from './_base/Footer'
 import Banner from './Banner'
 import WhyEnver from './WhyEnver'
+import Services from './Services'
 
 const Main: FC = () => {
   return (
@@ -12,7 +13,7 @@ const Main: FC = () => {
       <main className='container'>
         <Banner />
         <WhyEnver />
-        <section>Service</section>
+        <Services />
         <section>Portfolio</section>
         <section>Contact Us</section>
       </main>

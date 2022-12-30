@@ -1,0 +1,61 @@
+@import '/styles/vars.sass'
+
+.services
+    position: relative
+
+.services_trianglesIcon, .services_addIcon1, .services_addIcon2
+    position: absolute
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+
+.services_trianglesIcon
+    width: 9%
+    height: 15%
+    top: -5%
+    left: 4%
+    background-image: url('../../assets/triangles.svg')
+
+.services_addIcon1
+    width: 4%
+    height: 4%
+    top: 14%
+    right: -2%
+    transform: rotate(60deg)
+    background-image: url('../../assets/add.svg')
+
+.services_addIcon2
+    width: 4%
+    height: 4%
+    bottom: -5%
+    left: -3%
+    transform: rotate(20deg)
+    background-image: url('../../assets/add.svg')
+
+.services_title
+    text-align: center
+    max-width: 70%
+    margin: 0 auto
+    margin-bottom: 3vw
+
+.services_list
+    display: grid
+    grid-template-columns: auto auto auto
+    row-gap: 2.4vw
+
+.services_service
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 3vw
+    text-align: center
+
+.services_serviceTitle
+    font-size: 1.7vw
+    font-weight: normal
+    margin: 1.5vw 0
+
+.services_serviceDescr
+    color: $color_text_secondary
+    width: 96%

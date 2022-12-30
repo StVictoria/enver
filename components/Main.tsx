@@ -6,6 +6,7 @@ import Banner from './Banner'
 import WhyEnver from './WhyEnver'
 import Services from './Services'
 import Portfolio from './Portfolio'
+import ContactUs from './ContactUs'
 
 const Main: FC = () => {
   return (
@@ -16,7 +17,7 @@ const Main: FC = () => {
         <WhyEnver />
         <Services />
         <Portfolio />
-        <section>Contact Us</section>
+        <ContactUs />
       </main>
       <Footer />
     </div>

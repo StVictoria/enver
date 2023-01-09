@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import Button from '../../_common/Button'
 import s from './styles.module.sass'
 import Logo from '../../../assets/logo.svg'
@@ -10,6 +10,8 @@ import { ILink } from '../../../interfaces/ILink'
 import { nav } from '../../../static/nav'
 
 const Header: FC = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
   const router = useRouter()
 
   const renderNav = () =>
@@ -32,6 +34,14 @@ const Header: FC = () => {
       <div className={s.header_contactUsButtonWrapper}>
         <Button text='Contact Us' size='small' variant='outlined' />
       </div>
+      <button
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        className={clsx(s.header_burger, { [s.open]: isMobileMenuOpen })}
+      >
+        <div className={s.header_burgerLine1} />
+        <div className={s.header_burgerLine2} />
+        <div className={s.header_burgerLine3} />
+      </button>
     </header>
   )
 }

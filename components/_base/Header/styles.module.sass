@@ -6,6 +6,8 @@
     align-items: center
     padding-top: 42px
     padding-bottom: 42px
+    @include adaptive(medium)
+        padding: 40px 24px
 
 .header_logo
     width: 9vw
@@ -29,3 +31,48 @@
 .header_contactUsButtonWrapper
     @include adaptive(medium)
         display: none
+
+.header_burger
+    display: none
+    @include adaptive(medium)
+        display: flex
+        position: relative
+        flex-direction: column
+        align-items: flex-end
+        width: 20px
+        height: 16px
+
+.header_burgerLine1, .header_burgerLine2, .header_burgerLine3
+    position: absolute
+    top: 0
+    right: 0
+    background-color: $color_white
+    height: 3px
+    border-radius: 3px
+    transition: 0.6s all
+
+.header_burgerLine1
+    width: 100%
+
+.header_burgerLine2
+    top: 50%
+    width: 70%
+
+.header_burgerLine3
+    top: 100%
+    width: 40%
+
+.header_burger.open
+    height: 20px
+    .header_burgerLine1
+        top: 50%
+        transform: rotate(45deg)
+    .header_burgerLine2
+        top: 50%
+        right: 0
+        transform: rotate(-45deg)
+        width: 100%
+    .header_burgerLine3
+        top: 50%
+        left: 50%
+        width: 3px

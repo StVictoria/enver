@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import Image from 'next/image'
 import { FC, useState } from 'react'
 import { ISlide } from '../../interfaces/ISlide'
 import { slides } from '../../static/slides'
@@ -9,6 +10,21 @@ const Portfolio: FC = () => {
 
   const handleChangeCurrentSlide = (slide: number) => setCurrentSlide(slide)
 
+  const renderImage = (image: any, slideClass: string) => (
+    <div className={`${s.portfolio_slideItem} ${s[slideClass]}`}>
+      <div className={s.portfolio_slideItemImageWrapper}>
+        <Image
+          src={image}
+          alt='portfolio-slide'
+          objectFit='contain'
+          layout='fill'
+          className={s.portfolio_slideItemImage}
+          placeholder='blur'
+        />
+      </div>
+    </div>
+  )
+
   const renderSlides = () =>
     slides.map((slide: ISlide) => (
       <div
@@ -17,9 +33,9 @@ const Portfolio: FC = () => {
           transform: `translateX(-${currentSlide * 100}%)`,
         }}
       >
-        <div>SLIDE {slide.id}</div>
-        <div>SLIDE {slide.id}</div>
-        <div>SLIDE {slide.id}</div>
+        {renderImage(slide.image1, 'slide1')}
+        {renderImage(slide.image2, 'slide2')}
+        {renderImage(slide.image3, 'slide3')}
       </div>
     ))
 

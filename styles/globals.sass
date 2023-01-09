@@ -1,4 +1,4 @@
-@import '/styles/vars'
+@import '/styles/mixins'
 
 *
     box-sizing: border-box
@@ -32,6 +32,8 @@ a
 p, a, button
     font-size: 1.2vw
     line-height: 140%
+    @include adaptive(medium)
+        font-size: 4.3vw
 
 ul, li
     list-style: none
@@ -46,11 +48,16 @@ h2
     font-weight: 900
 
 .container
-    max-width: $mainContentWidth
-    padding: $mainSidesPadding
+    max-width: $contentWidthLarge
+    padding: $mainSidesPaddingLarge
     padding-top: 0
     padding-bottom: 0
     margin: 0 auto
+    @include adaptive(medium)
+        max-width: $contentWidthSmall
+        padding: $mainSidesPaddingSmall
 
 .sectionMB
     margin-bottom: 10vw
+    @include adaptive(medium)
+        margin-bottom: 140px

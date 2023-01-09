@@ -1,0 +1,6 @@
+@import "/styles/vars.sass"
+
+@mixin adaptive($breakpoint)
+    @if $breakpoint == medium
+        @media (max-width: $medium)
+            @content

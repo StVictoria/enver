@@ -29,7 +29,9 @@ const Header: FC = () => {
     <header className={`${s.header} container`}>
       <Image className={s.header_logo} src={Logo} alt='Enver' />
       <nav className={s.header_nav}>{renderNav()}</nav>
-      <Button text='Contact Us' size='small' variant='outlined' />
+      <div className={s.header_contactUsButtonWrapper}>
+        <Button text='Contact Us' size='small' variant='outlined' />
+      </div>
     </header>
   )
 }

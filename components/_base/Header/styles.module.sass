@@ -1,4 +1,4 @@
-@import '/styles/vars.sass'
+@import '/styles/mixins.sass'
 
 .header
     display: flex
@@ -9,11 +9,15 @@
 
 .header_logo
     width: 9vw
+    @include adaptive(medium)
+        width: auto
 
 .header_nav
     display: flex
     align-items: center
     color: $color_text_secondary
+    @include adaptive(medium)
+        display: none
 
 .header_navLink
     &:not(:last-child)
@@ -21,3 +25,7 @@
 
 .header_navLink.active
     color: $color_primary
+
+.header_contactUsButtonWrapper
+    @include adaptive(medium)
+        display: none

@@ -1,32 +1,48 @@
-@import '/styles/vars'
+@import '/styles/mixins'
 
 .banner
     display: flex
     align-items: center
+    @include adaptive(medium)
+        flex-direction: column
 
 .banner_info
     width: 60vw
     padding-bottom: 6vw
+    @include adaptive(medium)
+        width: 100%
 
 .banner_title
     font-size: 6vw
     font-weight: 900
     line-height: 97%
     margin-bottom: 2vw
+    @include adaptive(medium)
+        font-size: 11vw
+        line-height: 150%
+        margin-bottom: 30px
 
 .banner_descr
     width: 80%
     line-height: 200%
     color: $color_text_secondary
     margin-bottom: 4vw
+    @include adaptive(medium)
+        width: 100%
+        line-height: 150%
+        margin-bottom: 50px
 
 .banner_imageWrapper
     position: relative
+    width: 100%
 
 .banner_image
     width: 43vw
     height: 46vw
     background: url('../../assets/man.png') center center / contain no-repeat
+    @include adaptive(medium)
+        width: inherit
+        height: 414px
 
 .banner_brokenLinesIcon, .banner_trianglesIcon, .banner_circlesIcon, .banner_addIcon
     position: absolute
@@ -40,6 +56,9 @@
     top: 9%
     left: -8%
     background-image: url('../../assets/brokenLine.svg')
+    @include adaptive(medium)
+        top: 0
+        left: 0
 
 .banner_circlesIcon
     width: 9%
@@ -47,6 +66,9 @@
     top: 8%
     right: 0
     background-image: url('../../assets/circles.svg')
+    @include adaptive(medium)
+        top: 0
+        right: 0
 
 .banner_addIcon
     width: 9%
@@ -54,6 +76,9 @@
     bottom: 6%
     right: 12%
     background-image: url('../../assets/add.svg')
+    @include adaptive(medium)
+        bottom: 23px
+        right: 37px
 
 .banner_trianglesIcon
     width: 18%
@@ -61,3 +86,6 @@
     bottom: 0
     left: -20%
     background-image: url('../../assets/triangles.svg')
+    @include adaptive(medium)
+        bottom: -50px
+        left: 0

@@ -1,11 +1,19 @@
+@import '/styles/mixins.sass'
+
 .contactUs
     position: relative
     display: flex
     justify-content: space-between
     align-items: center
+    @include adaptive(medium)
+        flex-direction: column
+        align-items: flex-start
 
 .contactUs_title
     max-width: 80%
+    @include adaptive(medium)
+        max-width: unset
+        margin-bottom: 50px
 
 .contactUs_addIcon, .contactUs_circlesIcon
     position: absolute
@@ -26,3 +34,7 @@
     bottom: -75%
     left: 3%
     background-image: url('../../assets/circles.svg')
+    @include adaptive(medium)
+        width: 39px
+        height: 46px
+        bottom: -68px

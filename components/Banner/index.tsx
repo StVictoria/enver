@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import Button from '../_common/Button'
 import s from './styles.module.sass'
+import arrowTop from '../../assets/arrowTop.svg'
 
 const Banner: FC = () => {
   return (
@@ -12,7 +13,7 @@ const Banner: FC = () => {
           UI/UX Design to developers, we will provide the best service for those
           of you who use our services.
         </p>
-        <Button text='Our Services' />
+        <Button text='Our Services' icon={arrowTop} />
       </div>
       <div className={s.banner_imageWrapper}>
         <div className={s.banner_image} />

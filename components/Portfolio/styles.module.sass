@@ -1,14 +1,18 @@
-@import '/styles/vars.sass'
+@import '/styles/mixins.sass'
 
-.portfolio_carousel
+// laptop
+
+.portfolio_laptopCarousel
     margin-top: 3.2vw
     overflow-x: hidden
+    @include adaptive(medium)
+        display: none
 
-.portfolio_slides
+.portfolio_laptopSlides
     display: flex
     height: 25vw
 
-.portfolio_slide
+.portfolio_laptopSlide
     position: relative
     display: flex
     justify-content: space-between
@@ -17,7 +21,7 @@
     width: 100%
     transition: 0.6s all
 
-.portfolio_slideItem
+.portfolio_laptopSlideItem
     position: absolute
     display: flex
     align-items: center
@@ -28,20 +32,20 @@
     background-color: #1E1E20
     border-radius: 14px
 
-.slide1
+.laptopSlide1
     top: 0
     left: 0
 
-.slide2
+.laptopSlide2
     top: 3vw
     left: 50%
     margin-left: -12vw
 
-.slide3
+.laptopSlide3
     top: 6vw
     right: 0
 
-.portfolio_slideItemImageWrapper
+.portfolio_laptopSlideItemImageWrapper
     position: relative
     width: 100%
     height: 100%
@@ -49,23 +53,74 @@
 .portfolio_slideItemImage
     position: absolute
 
-.portfolio_sliderButtons
+.portfolio_laptopSliderButtons
     display: flex
     justify-content: center
     width: 100%
     margin-top: 3vw
 
-.carousel_button
+.portfolio_laptopButton
     width: 8px
     height: 8px
     border-radius: 50%
     background-color: #121213
     transition: 0.4s all
 
-.carousel_button:not(:last-child)
+.portfolio_laptopButton:not(:last-child)
     margin-right: 8px
 
-.carousel_button.active
+.portfolio_laptopButton.active
     width: 24px
     background-color: $color_primary
     border-radius: 10px
+
+// mobile
+
+.portfolio_mobileCarousel
+    display: none
+    overflow: hidden
+    @include adaptive(medium)
+        display: block
+        margin: 0 -24px
+        border-radius: 14px
+
+.portfolio_mobileSlider
+    display: flex
+    margin: 50px 0
+    background-color: #1E1E20
+
+.portfolio_mobileSlide
+    width: 100%
+    padding: 24px
+    transition: 0.4s all
+
+.portfolio_mobileSliderButtons
+    display: flex
+    justify-content: center
+    width: 100%
+
+.portfolio_mobileSliderButton
+    position: relative
+    width: 38px
+    height: 38px
+    border-radius: 50%
+    background-color: $color_primary
+    &:not(:last-child)
+        margin-right: 12px
+
+.portfolio_mobileSliderButton::before
+    position: absolute
+    content: ""
+    top: 50%
+    left: 50%
+    width: 21px
+    height: 21px
+    margin-left: -11px
+    margin-top: -10px
+    background: url('../../assets/arrowLeft.svg') center center / contain no-repeat
+
+.rightButton
+    transform: rotate(180deg)
+
+.portfolio_mobileSliderButton.disabled
+    background-color: rgba(255, 255, 255, 0.2)

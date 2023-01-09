@@ -1,17 +1,25 @@
-@import '/styles/vars.sass'
+@import '/styles/mixins.sass'
 
 .whyEnver_titleBlock
     display: flex
     justify-content: space-between
     margin-bottom: 3vw
+    @include adaptive(medium)
+        flex-direction: column
 
 .whyEnver_title
     width: 48%
+    @include adaptive(medium)
+        width: 100%
+        margin-bottom: 30px
 
 .whyEnver_descr
     width: 43%
     color: $color_text_secondary
     line-height: 200%
+    @include adaptive(medium)
+        width: 100%
+        margin-bottom: 50px
 
 .whyEnver_video
     display: flex
@@ -29,16 +37,25 @@
     border-radius: 50%
     cursor: pointer
     transition: 0.6s transform
-    &::before
-        content: ''
-        position: absolute
-        top: 50%
-        left: 50%
-        width: 20%
-        height: 20%
-        background: url('../../assets/play.svg') center center / contain no-repeat
-        margin-left: -8%
-        margin-top: -10%
+    @include adaptive(medium)
+        width: 40px
+        height: 40px
+
+.whyEnver_playButton::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 20%
+    height: 20%
+    background: url('../../assets/play.svg') center center / contain no-repeat
+    margin-left: -8%
+    margin-top: -10%
+    @include adaptive(medium)
+        width: 35%
+        height: 35%
+        margin-left: -13%
+        margin-top: -17%
 
 .whyEnver_playButton:hover
     transform: scale(1.1)

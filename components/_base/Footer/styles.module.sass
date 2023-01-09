@@ -1,4 +1,4 @@
-@import '/styles/vars.sass'
+@import '/styles/mixins.sass'
 
 .footer
     display: flex
@@ -7,9 +7,20 @@
     color: $color_text_secondary
     padding-top: 4vw
     padding-bottom: 4vw
+    @include adaptive(medium)
+        flex-direction: column
+        padding-bottom: 50px
 
 .footer_logo
     width: 9vw
+    @include adaptive(medium)
+        width: 115px
+        margin-bottom: 40px
 
 .footer_links
     display: flex
+    @include adaptive(medium)
+        flex-direction: column
+        align-items: center
+        > li
+            margin-bottom: 40px

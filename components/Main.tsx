@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import Header from './_base/Header'
 import s from './Main.module.sass'
 import Footer from './_base/Footer'
@@ -9,6 +9,13 @@ import Portfolio from './Portfolio'
 import ContactUs from './ContactUs'
 
 const Main: FC = () => {
+
+  useEffect(() => {
+    const services: any = document.getElementById('services')
+    console.log(services.getBoundingClientRect())
+    console.log(document.body.getBoundingClientRect(),);
+    
+  }, [])
   return (
     <div className={s.mainWrapper}>
       <Header />

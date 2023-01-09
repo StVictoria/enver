@@ -28,6 +28,7 @@ const LaptopCarousel: FC = () => {
   const renderSlides = () =>
     laptopSlides.map((slide: ILaptopSlide) => (
       <div
+        key={slide.id}
         className={s.portfolio_laptopSlide}
         style={{
           transform: `translateX(-${currentSlide * 100}%)`,
@@ -42,6 +43,7 @@ const LaptopCarousel: FC = () => {
   const renderCarouselButtons = () =>
     laptopSlides.map((slide: ILaptopSlide) => (
       <button
+        key={slide.id}
         className={clsx(s.portfolio_laptopButton, {
           [s.active]: currentSlide === slide.id,
         })}

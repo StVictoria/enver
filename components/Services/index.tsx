@@ -15,7 +15,7 @@ const Services: FC = () => {
     ))
 
   return (
-    <section className={`${s.services} sectionMB`}>
+    <section id="services" className={`${s.services} sectionMB`}>
       <h2 className={s.services_title}>The Service We Provide For You</h2>
       <ul className={s.services_list}>{renderServices()}</ul>
       <div className={s.services_trianglesIcon}/>

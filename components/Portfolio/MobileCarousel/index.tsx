@@ -31,6 +31,7 @@ const MobileCarousel: FC = () => {
   const renderSlides = () =>
     mobileSlides.map((slide: IMobileSlide) => (
       <div
+        key={slide.id}
         className={s.portfolio_mobileSlide}
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >

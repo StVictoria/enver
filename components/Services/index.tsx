@@ -15,12 +15,13 @@ const Services: FC = () => {
     ))
 
   return (
-    <section id="services" className={`${s.services} sectionMB`}>
+    <section id='services' className={`${s.services} sectionMB`}>
+      <div className={s.services_blurBlock} />
       <h2 className={s.services_title}>The Service We Provide For You</h2>
       <ul className={s.services_list}>{renderServices()}</ul>
-      <div className={s.services_trianglesIcon}/>
-      <div className={s.services_addIcon1}/>
-      <div className={s.services_addIcon2}/>
+      <div className={s.services_trianglesIcon} />
+      <div className={s.services_addIcon1} />
+      <div className={s.services_addIcon2} />
     </section>
   )
 }

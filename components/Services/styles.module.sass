@@ -3,6 +3,18 @@
 .services
     position: relative
 
+.services_blurBlock
+    position: absolute
+    top: -50%
+    left: -40%
+    height: 50vw
+    width: 50vw
+    border-radius: 15vw
+    background: linear-gradient(rgba(84, 84, 212), rgba(84, 84, 212, 0.42))
+    opacity: 0.21
+    filter: blur(300px)
+    transform: rotate(-45deg)
+
 .services_trianglesIcon, .services_addIcon1, .services_addIcon2
     position: absolute
     background-position: center
@@ -53,6 +65,7 @@
     max-width: 70%
     margin: 0 auto
     margin-bottom: 3vw
+    z-index: 10
     @include adaptive(medium)
         margin: 0
         margin-bottom: 50px

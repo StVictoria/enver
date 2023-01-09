@@ -5,7 +5,8 @@ import s from './styles.module.sass'
 
 const Portfolio: FC = () => {
   return (
-    <section className='sectionMB'>
+    <section className={`${s.portfolio} sectionMB`}>
+      <div className={s.portfolio_blurBlock} />
       <h2>Our Awesome Portofolio</h2>
       <LaptopCarousel />
       <MobileCarousel />

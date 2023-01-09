@@ -6,6 +6,7 @@ import arrowTop from '../../assets/arrowTop.svg'
 const Banner: FC = () => {
   return (
     <section className={`${s.banner} sectionMB`}>
+      <div className={s.banner_blurBlock} />
       <div className={s.banner_info}>
         <h1 className={s.banner_title}>Build Your Awesome Platform</h1>
         <p className={s.banner_descr}>

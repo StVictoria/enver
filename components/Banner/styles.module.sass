@@ -1,14 +1,28 @@
 @import '/styles/mixins'
 
 .banner
+    position: relative
     display: flex
     align-items: center
     @include adaptive(medium)
         flex-direction: column
 
+.banner_blurBlock
+    position: absolute
+    top: -83%
+    left: -22%
+    height: 100vw
+    width: 30vw
+    border-radius: 15vw
+    background: linear-gradient(rgba(84, 84, 212), rgba(84, 84, 212, 0.42))
+    opacity: 0.27
+    filter: blur(199px)
+    transform: rotate(-45deg)
+
 .banner_info
     width: 60vw
     padding-bottom: 6vw
+    z-index: 10
     @include adaptive(medium)
         width: 100%
 
